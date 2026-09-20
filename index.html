@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CountQuest — Grade 1 Counting Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mascot" aria-hidden="true">⭐</div>
+        <div>
+          <h1>CountQuest</h1>
+          <div class="subtitle">Grade 1 Counting Game</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="btn-instruct" class="btn" title="Play instructions">🔊 Talk</button>
+        <button id="btn-mute" class="btn" title="Toggle voice">🔈</button>
+        <button id="btn-skip" class="btn" title="Skip level">⏭ Skip</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="left">
+        <div id="level-banner" class="level-banner">Ready for Level 1</div>
+
+        <div id="game-area" class="game-area" aria-live="polite">
+          <!-- Dynamic game content goes here -->
+        </div>
+
+        <div class="game-footer">
+          <div class="progress">
+            <div>Level <span id="level-number">1</span> of <span id="total-levels">6</span></div>
+            <div>Score: <span id="score">0</span></div>
+            <div>Time: <span id="time">0s</span></div>
+          </div>
+          <div class="actions">
+            <button id="btn-start" class="primary big">Start Level</button>
+            <button id="btn-reset" class="secondary big">Reset Game</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="card">
+          <h3>Stickers</h3>
+          <div id="stickers" class="stickers" aria-live="polite">
+            <!-- sticker icons -->
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Parental Progress</h3>
+          <div id="progress-notes" class="notes">
+            <div>Total Levels Played: <strong id="played">0</strong></div>
+            <div>Correct Answers: <strong id="correct">0</strong></div>
+            <div>Total Time: <strong id="total-time">0s</strong></div>
+          </div>
+          <div class="card-actions">
+            <button id="btn-download-csv" class="btn">Download CSV Questions</button>
+            <button id="btn-copy-summary" class="btn">Copy Summary</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Help & Accessibility</h3>
+          <p>Large buttons, voice instructions (English). Use the Talk button to replay instructions. Toggle mute to silence voice cues.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div>Prototype — free for family testing. Theme packs & classroom licenses planned.</div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
